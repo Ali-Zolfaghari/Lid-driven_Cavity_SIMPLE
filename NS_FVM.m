@@ -1,3 +1,30 @@
+
+%***************************************************************************************************
+%*   Simulate lid-driven cavity flow , using SIMPLE algorithm, by presented code.
+%*   I take no responsibilities for any errors in the code or damage thereby.
+%*   Please notify me at zolfaghari1992iut@gmail.com if the code is used in any type of application.
+%***************************************************************************************************
+%*   Developer   : Ali Zolfaghari Sichani (10-06-2016)
+%***************************************************************************************************
+%*   References  : 
+%*   An Introduction to Computational Fluid Dynamics: The Finite Volume Method 2nd Edition
+%*   by H. Versteeg (Author), W. Malalasekera (Author)
+%***************************************************************************************************
+%*   Navier–Stokes equations  
+%*   Inputs      :
+%*   M         (divide each edge of square            )
+%*   rho       (density                               )
+%*   mu        (dynamic viscousity                    )
+%*   MaxI      (max. of iteration                     )
+%*   alpha_u   (under-relaxation facotr fot x-velocity)
+%*   alpha_v   (under-relaxation facotr fot y-velocity)
+%*   alpha_p   (under-relaxation facotr fot pressure  )
+%*   Outputs      :
+%*   all data export in tecplot format
+%***************************************************************************************************
+
+
+
 clear,clc
 close all
 format compact
@@ -11,11 +38,14 @@ alpha_u = 0.050;
 alpha_v = 0.050;
 alpha_p = 0.005;
 
+
+
+
+
 IW = 10;
 XL = 0.5;
 YL = 0.5;
 NL = 100;
-
 Vi = 1.0;
 Lx = 1.0;
 Ly = 1.0;
